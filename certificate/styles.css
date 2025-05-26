@@ -5,7 +5,7 @@ body {
 
 .certificate-body {
   max-width: 75rem;
-  height: 45rem;
+  height: 48rem;
   background: white;
   margin: auto;
   overflow: hidden;
@@ -16,9 +16,9 @@ body {
 .certificate-body::after{
   content: "";
   position: absolute;
-  top: 30px;
-  left: 19px;
-  width: 97%;
+  top: 4%;
+  left: 2%;
+  width: 96%;
   height: 4px;
   background: #043344;
   border: 1px solid #043344;
@@ -34,23 +34,33 @@ body {
 
 .logo-left {
   max-width: 180px;
-  height: auto;
-  margin-top: 10px ;
+  height: 58px;
+
 }
 
 .logo-right {
   border: 2px solid #043344;
   font-weight: bold;
-  padding: 12px 25px;
-  min-width: 120px;
+  padding: 5px;
+  max-width: 180px;
+  height: 58px;
   text-align: center;
-  font-size: 1rem;
+  font-size: 1rem; 
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-right img{
+  width: 100%;
+  height: auto;
 }
 
 .certificate-title {
   font-weight: bold;
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 3.5rem;
+  margin-bottom: 0rem;
   color: #043344;
 }
 
@@ -63,8 +73,8 @@ body {
 
 .certificate-content {
   font-size: 1.2rem;
-  margin: 3rem auto;
-  line-height: 1.;
+  margin: 6rem auto;
+  line-height: 1.5;
   max-width: 80%;
   font-weight: 500;
   color: #043344;
@@ -77,23 +87,27 @@ body {
   padding-top: 5px;
   margin-top: 10px;
   width: 200px;
+  font-size: 19px;
+  color: #043344;
 }
 
 .footer-logos {
-  margin-top: 3rem;
+  margin:0 40px;
+  margin-top: 5rem;
   align-items: flex-end;
 }
 
 .footer-logo {
-  max-height: 90px;
-  width: auto;
+  max-height: 135px;
+  max-width:  150px;
+  width: 115px;
 }
 
 .signature-container {
   min-width: 150px;
 }
 
-/* Corner Shapes */
+/* Corner Shapes - Base Styles */
 /* Left side */
 .corner-shapes-left-f::before {
   content: "";
@@ -102,7 +116,7 @@ body {
   height: 120px;
   transform: skewX(30deg);
   z-index: 1;
-  left: -7px;
+  left: -8px;
   width: 45px;
   background: linear-gradient(
     135deg,
@@ -111,8 +125,6 @@ body {
     rgba(0, 123, 255, 0.6) 80%,
     rgba(0, 123, 255, 1) 100%
   );
-  backdrop-filter: blur(6px);
-  mix-blend-mode: overlay;
   opacity: 0.8;
 }
 
@@ -150,7 +162,7 @@ body {
 }
 
 .corner-shapes-left-dark {
-  background-color: #043a8a;
+  background-color: #032854;
   width: 135px;
   height: 52px;
   position: absolute;
@@ -171,7 +183,7 @@ body {
   z-index: 1;
   right: 11px;
   width: 45px;
-  background: linear-gradient(135deg, #66ccff 80%, #007bff 100%);
+  background: linear-gradient(-135deg, #66ccff 80%, #007bff 100%);
   opacity: 0.8;
 }
 
@@ -184,7 +196,7 @@ body {
   z-index: 1;
   right: 80px;
   width: 70px;
-  background: linear-gradient(135deg, white 0%, #66ccff 40%, #007bff 100%);
+  background: linear-gradient(-135deg, white 0%, #66ccff 40%, #007bff 100%);
   opacity: 0.8;
 }
 
@@ -197,7 +209,7 @@ body {
   z-index: 1;
   right: 145px;
   width: 39px;
-  background: linear-gradient(135deg, #66ccff 40%, #007bff 100%);
+  background: linear-gradient(-135deg, #66ccff 40%, #007bff 100%);
   backdrop-filter: blur(8px);
   background-blend-mode: overlay;
   opacity: 0.8;
@@ -207,17 +219,17 @@ body {
   content: "";
   position: absolute;
   bottom: 0;
-  height:105px;
+  height: 105px;
   transform: skewX(-30deg);
   z-index: 1;
   right: -11px;
   width: 39px;
-  background: linear-gradient(135deg, #66ccff 40%, #007bff 100%);
+  background: linear-gradient(-135deg, #66ccff 40%, #007bff 100%);
   opacity: 0.8;
 }
 
 .corner-shapes-right-dark {
-  background-color: #043a8a;
+  background-color: #032854;
   width: 135px;
   height: 52px;
   position: absolute;
@@ -228,6 +240,7 @@ body {
   clip-path: polygon(0 100%, 14% 0, 100% 0, 100% 100%);
 }
 
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .certificate-body {
@@ -235,12 +248,19 @@ body {
     padding: 20px 10px;
   }
   
+  .certificate-body::after{
+    top: 2%;
+    left: 2%;
+    width: 96%;
+  }
+
   .certificate {
     padding: 15px;
   }
   
   .logo-left {
-    max-width: 120px;
+    max-width: 135px;
+    width: auto;
   }
   
   .logo-right {
@@ -266,6 +286,7 @@ body {
   .footer-logos {
     flex-direction: column;
     gap: 20px;
+    margin-top: 2rem;
   }
   
   .footer-logo {
@@ -275,4 +296,75 @@ body {
   .signature-container {
     margin: 10px 0;
   }
+    /* Left side  */
+  .corner-shapes-left-f::before {
+    height: 80px;
+    left: -5px;
+    width: 35px;
+  }
+  
+  .corner-shapes-left-f::after {
+    height: 80px;
+    left: 35px;
+    width: 50px;
+  }
+  
+  .corner-shapes-left-s::before {
+    height: 50px;
+    left: 85px;
+    width: 30px;
+  }
+  
+  /* Right side  */
+  .corner-shapes-right-f::before {
+    height: 100px;
+    right: 8px;
+    width: 35px;
+  }
+  
+  .corner-shapes-right-f::after {
+    height: 80px;
+    right: 60px;
+    width: 50px;
+  }
+  
+  .corner-shapes-right-s::before {
+    height: 50px;
+    right: 110px;
+    width: 30px;
+  }
+  
+  .corner-shapes-right-s::after {
+    height: 70px;
+    right: -8px;
+    width: 30px;
+  }
+  
+  .corner-shapes-left-dark,
+  .corner-shapes-right-dark {
+    width: 100px;
+    height: 40px;
+  }
 }   
+
+@media (max-width: 480px) {
+  .corner-shapes-left-s::before,
+  .corner-shapes-right-s::before {
+    display: none;
+  }
+  
+  /* Further reduce dark shapes */
+  .corner-shapes-left-dark,
+  .corner-shapes-right-dark {
+    width: 80px;
+    height: 30px;
+  }
+  
+  /*  main shapes */
+  .corner-shapes-left-f::before,
+  .corner-shapes-left-f::after,
+  .corner-shapes-right-f::before,
+  .corner-shapes-right-f::after {
+    height: 60px;
+  }
+}
