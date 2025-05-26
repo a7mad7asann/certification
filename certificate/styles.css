@@ -110,17 +110,17 @@ body {
   margin-bottom: 40px;
 }
 
- .qr-logo{
-    border: 2px solid #043344;
-    padding: 5px;
-    width: 100px;
-    height: 100px;
-  }
+.qr-logo {
+  border: 2px solid #043344;
+  padding: 5px;
+  width: 100px;
+  height: 100px;
+}
 
-  .qr-logo  img {
-    height: 100%;
-    width:  100%;
-  }
+.qr-logo img {
+  height: 100%;
+  width: 100%;
+}
 
 /* Corner Shapes - Base Styles */
 /* Left side */
@@ -389,5 +389,11 @@ body {
   .corner-shapes-right-f::before,
   .corner-shapes-right-f::after {
     height: 60px;
+  }
+
+  .qr-logo {
+    padding: 0px;
+    width: 115px;
+    height: 70px;
   }
 }
