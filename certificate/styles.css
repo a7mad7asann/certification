@@ -13,7 +13,7 @@ body {
   position: relative;
 }
 
-.certificate-body::after{
+.certificate-body::after {
   content: "";
   position: absolute;
   top: 4%;
@@ -35,7 +35,6 @@ body {
 .logo-left {
   max-width: 180px;
   height: 58px;
-
 }
 
 .logo-right {
@@ -45,14 +44,14 @@ body {
   max-width: 180px;
   height: 58px;
   text-align: center;
-  font-size: 1rem; 
+  font-size: 1rem;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.logo-right img{
+.logo-right img {
   width: 100%;
   height: auto;
 }
@@ -66,9 +65,9 @@ body {
 
 .certificate-subtitle {
   font-size: 1.5rem;
-    font-weight: 500;
-    margin: 0;
-    color: #043344;
+  font-weight: 500;
+  margin: 0;
+  color: #043344;
 }
 
 .certificate-content {
@@ -92,20 +91,36 @@ body {
 }
 
 .footer-logos {
-  margin:0 40px;
+  margin: 0 40px;
   margin-top: 5rem;
   align-items: flex-end;
 }
 
 .footer-logo {
   max-height: 135px;
-  max-width:  150px;
+  max-width: 150px;
   width: 115px;
 }
 
 .signature-container {
   min-width: 150px;
 }
+
+.logo-cont {
+  margin-bottom: 40px;
+}
+
+ .qr-logo{
+    border: 2px solid #043344;
+    padding: 5px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .qr-logo  img {
+    height: 100%;
+    width:  100%;
+  }
 
 /* Corner Shapes - Base Styles */
 /* Left side */
@@ -240,15 +255,14 @@ body {
   clip-path: polygon(0 100%, 14% 0, 100% 0, 100% 100%);
 }
 
-
 /* Responsive Design */
 @media (max-width: 768px) {
   .certificate-body {
     height: auto;
     padding: 20px 10px;
   }
-  
-  .certificate-body::after{
+
+  .certificate-body::after {
     top: 2%;
     left: 2%;
     width: 96%;
@@ -257,109 +271,118 @@ body {
   .certificate {
     padding: 15px;
   }
-  
+
   .logo-left {
     max-width: 135px;
     width: auto;
   }
-  
+
   .logo-right {
     padding: 8px 15px;
     min-width: 90px;
     font-size: 0.8rem;
   }
-  
+
   .certificate-title {
     font-size: 1.8rem;
   }
-  
+
   .certificate-subtitle {
     font-size: 1.2rem;
   }
 
-  
   .certificate-content {
     font-size: 1rem;
     margin: 2rem auto;
   }
-  
+
   .footer-logos {
     flex-direction: column;
     gap: 20px;
     margin-top: 2rem;
   }
-  
+
   .footer-logo {
     max-height: 70px;
   }
-  
+
   .signature-container {
     margin: 10px 0;
   }
-    /* Left side  */
+
+  .logo-cont {
+    margin-bottom: 63px;
+  }
+
+  .Qr-ph img {
+    height: 60px;
+    width: 60px;
+  }
+
+  /* Left side  */
   .corner-shapes-left-f::before {
     height: 80px;
     left: -5px;
     width: 35px;
   }
-  
+
   .corner-shapes-left-f::after {
     height: 80px;
     left: 35px;
     width: 50px;
   }
-  
+
   .corner-shapes-left-s::before {
     height: 50px;
     left: 85px;
     width: 30px;
   }
-  
+
   /* Right side  */
   .corner-shapes-right-f::before {
     height: 100px;
     right: 8px;
     width: 35px;
   }
-  
+
   .corner-shapes-right-f::after {
     height: 80px;
     right: 60px;
     width: 50px;
   }
-  
+
   .corner-shapes-right-s::before {
     height: 50px;
     right: 110px;
     width: 30px;
   }
-  
+
   .corner-shapes-right-s::after {
     height: 70px;
     right: -8px;
     width: 30px;
   }
-  
+
   .corner-shapes-left-dark,
   .corner-shapes-right-dark {
     width: 100px;
     height: 40px;
   }
-}   
+}
 
 @media (max-width: 480px) {
   .corner-shapes-left-s::before,
   .corner-shapes-right-s::before {
     display: none;
   }
-  
+
   /* Further reduce dark shapes */
   .corner-shapes-left-dark,
   .corner-shapes-right-dark {
     width: 80px;
     height: 30px;
   }
-  
+
   /*  main shapes */
   .corner-shapes-left-f::before,
   .corner-shapes-left-f::after,
